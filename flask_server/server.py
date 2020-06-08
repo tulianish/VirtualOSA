@@ -1,16 +1,11 @@
 import requests
 from flask import Flask, render_template, url_for
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__, static_url_path='',static_folder='build',template_folder='build')
-CORS(app)
+CORS(app, resources={r'/*': {'Access-Control-Allow-Origin': '*'}})
 
-
-@app.route('/')
-def landing_page():
-	return render_template('index.html')
-
-@app.route('/api/cmd/')
+@app.route('/api/cmd/', methods=['GET', 'POST'])
 def cmd_route():
 	url = 'http://flaskosa.herokuapp.com/cmd'
 	req = requests.get(url)
