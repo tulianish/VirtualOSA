@@ -24,19 +24,19 @@ class UserInterface extends React.Component {
   }
   async startClicked() {
     this.props.start();
-    let url = 'http://localhost:5000/api/cmd/START';
+    let url = '/api/cmd/START';
     let fetchData = await axios.get(url);
     this.props.buttonStart(new Date() + " : " + fetchData.data + "\n");
   }
   async stopClicked() {
     this.props.stop();
-    let url = 'http://localhost:5000/api/cmd/STOP';
+    let url = '/api/cmd/STOP';
     let fetchData = await axios.get(url);
     this.props.buttonStart(new Date() + " : " + fetchData.data + "\n");
   }
   async singleClicked() {
     this.props.sendDisplay();
-    let url = 'http://localhost:5000/api/cmd/SINGLE';
+    let url = '/api/cmd/SINGLE';
     let fetchData = await axios.get(url);
     this.props.buttonStart(new Date() + " : " + fetchData.data + "\n");
   }
@@ -45,7 +45,7 @@ class UserInterface extends React.Component {
     this.props.buttonStart(new Date() + " : " + "Persistence Mode : Turned On" + "\n");
   }
   async handleSubmit(event) {
-    let url = '/cmd/' + this.state.req;
+    let url = '/api/cmd/' + this.state.req;
     let fetchData = await axios.get(url).catch(function(error) {
       return error.response;
     });

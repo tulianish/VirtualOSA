@@ -39,7 +39,7 @@ class UserInterface extends React.Component {
     document.getElementById("logBox").value = "";
   }
   async handleSubmit(event) {
-    let url = 'http://localhost:5000/api/cmd/' + this.state.req;
+    let url = '/api/cmd/' + this.state.req;
     let fetchData = await axios.get(url).catch(function(error) {
       return error.response;
     });

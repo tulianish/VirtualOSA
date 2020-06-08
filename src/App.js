@@ -34,8 +34,8 @@ class App extends React.Component {
     let data = [];
     let readings = [];
     let xandy = [];
-    let url = "http://localhost:5000/api/cmd/TRACE";
-    data = await axios.get(url, );
+    let url = "/api/cmd/TRACE";
+    data = await axios.get(url);
     if (data.data.version) {
       for (let i = 0; i < data.data.xdata.length; i++) {
         xandy.push({
@@ -64,7 +64,7 @@ class App extends React.Component {
     let data = [];
     let readings = [];
     let xandy = [];
-    let url = "http://localhost:5000/api/cmd/TRACE";
+    let url = "/api/cmd/TRACE";
     data = await axios.get(url);
     if (data.data.version) {
       for (let i = 0; i < data.data.xdata.length; i++) {
