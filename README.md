@@ -36,6 +36,12 @@ Make sure you have these installed :
 
 ### React
 
+* Navigate inside VirtualOSA/ directory to install all react dependencies
+
+```
+npm install
+```
+
 * Navigate inside VirtualOSA/ directory
 
 ```
@@ -48,9 +54,16 @@ React would start serving at `http://localhost:3000/`
 * Navigate inside VirtualOSA/flask_server directory
 
 ```
+pip install -r requirements.txt
+```
+
+* Navigate inside VirtualOSA/flask_server directory
+
+```
 export FLASK_APP=server.py
 flask run
 ```
+
 Flask would start serving at `http://localhost:5000/api/cmd`
 
 ## Features
@@ -109,6 +122,10 @@ A log that stores all the communication between the user and the system. It hand
 
 * ChartsJS
 * chartjs-zoom-plugin
+* Bootstrap
+* nginx
+* Gunicorn
+* AWS EC2
 
 ## Links
 
