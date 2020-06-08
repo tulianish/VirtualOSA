@@ -1,0 +1,20 @@
+.button-horizontal
+{
+	display:inline;
+	width:100%;
+	height: 100%;
+	
+}
+
+.button-horizontal Button
+{
+
+	padding-left:20px;
+	padding-right:20px;
+	margin-left:10px;
+}
+
+.clear
+{
+	width:100%;
+}
